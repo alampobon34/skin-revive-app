@@ -25,7 +25,7 @@ export const CATEGORIES = [
   { _id: "5", name: "Hands" },
   { _id: "6", name: "Feet" },
   { _id: "7", name: "Hair" },
-  { _id: "8", name: "V-Area" },
+  // { _id: "8", name: "V-Area" },
 ];
 
 export const COROUSEL = [

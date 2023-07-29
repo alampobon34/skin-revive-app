@@ -1,9 +1,23 @@
-import { StyleSheet, Text, View, Dimensions, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+  FlatList,
+} from "react-native";
 import React from "react";
-import { Category, SearchField, Carousel } from "../components/index";
+import {
+  Category,
+  SearchField,
+  Carousel,
+  Heading,
+  NewsCard,
+} from "../components/index";
+import { NEWS } from "../constants/news";
 import { CATEGORIES, SIZES } from "../constants/constant";
 import { useNavigation } from "@react-navigation/native";
-import { FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { SliderBox } from "react-native-image-slider-box";
 import ImageSlider from "../components/ImageSlider";
@@ -57,11 +71,29 @@ const HomeScreen = () => {
             showsHorizontalScrollIndicator={false}
           />
         </View>
-        <View style={{ marginTop: 5 }}>
-          <ImageSliderRow />
+        <View style={{ marginTop: 5, flex: 1 }}>
+          {/* <ImageSliderRow /> */}
+          <Carousel />
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Heading title={"Latest News"} />
+          <TouchableOpacity>
+            <Text>View All</Text>
+          </TouchableOpacity>
         </View>
         <View>
-          <Text>asdasassd</Text>
+          <FlatList
+            data={NEWS}
+            renderItem={({ item }) => <NewsCard item={item} />}
+            keyExtractor={(item, index) => item.id}
+            showsHorizontalScrollIndicator={false}
+          />
         </View>
       </View>
     </ScrollView>

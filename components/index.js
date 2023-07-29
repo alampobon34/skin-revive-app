@@ -1,4 +1,7 @@
 import Category from "./Category";
 import SearchField from "./SearchField";
 import Carousel from "./Carousel";
-export { Category, SearchField, Carousel };
+import Heading from "./Heading";
+import NewsCard from "./NewsCard";
+
+export { Category, SearchField, Carousel,Heading, NewsCard };
