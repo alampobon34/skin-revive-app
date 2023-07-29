@@ -6,6 +6,7 @@ import NotificationScreen from "./NotificationScreen";
 import LoginScreen from "./LoginScreen";
 import RegisterScreen from "./RegisterScreen";
 import SearchListScreen from "./SearchListScreen";
+import DetailsScreen from "./DetailsScreen";
 
 export {
   HomeScreen,
@@ -16,4 +17,5 @@ export {
   NotificationScreen,
   LoginScreen,
   RegisterScreen,
+  DetailsScreen,
 };

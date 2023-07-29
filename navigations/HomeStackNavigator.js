@@ -1,6 +1,10 @@
 import { Image, TouchableOpacity, View } from "react-native";
 import React from "react";
-import { HomeScreen, NotificationScreen } from "../screens/index";
+import {
+  HomeScreen,
+  NotificationScreen,
+  DetailsScreen,
+} from "../screens/index";
 import { Fontisto } from "@expo/vector-icons";
 import { SIZES } from "../constants/constant";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -49,6 +53,17 @@ const HomeStackNavigator = () => {
         options={{
           headerBackTitleVisible: false,
           headerTitle: "Notification",
+          headerTintColor: "black",
+          headerTitleAlign: "center",
+        }}
+      />
+
+      <HomeStack.Screen
+        name="Details"
+        component={DetailsScreen}
+        options={{
+          headerBackTitleVisible: false,
+          headerTitle: "Details",
           headerTintColor: "black",
           headerTitleAlign: "center",
         }}
